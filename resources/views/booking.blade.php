@@ -225,7 +225,9 @@ var ScreenUI=Backbone.View.extend({
 	},
 	bookTickets:function(){
 		if(BookedSeats.length==parseInt($('#seats').val())) {
-			$(".error").text("");
+
+			put your code here
+			/*$(".error").text("");
 			var reservedseats=JSON.parse(localStorage.getItem('ReservedSeats'))||[];
 			_.each(BookedSeats,function(bookedSeat){
 				reservedseats.push(bookedSeat);
@@ -233,9 +235,10 @@ var ScreenUI=Backbone.View.extend({
 			var nameSeatsJSON=JSON.parse(localStorage.getItem('NameSeatsJSON'))||{};
 			nameSeatsJSON[$('#name').val()]=BookedSeats;
 			localStorage.setItem('NameSeatsJSON',JSON.stringify(nameSeatsJSON));
-			localStorage.setItem('ReservedSeats',JSON.stringify(reservedseats));
 			this.updateTicketInfo();
+			localStorage.setItem('ReservedSeats',JSON.stringify(reservedseats));
 			window.location.reload();
+			*/
 		}
 		else{
 			$(".error").html("Please select exactly "+ $('#seats').val()+" seats");
